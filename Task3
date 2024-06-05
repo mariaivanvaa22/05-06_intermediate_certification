@@ -1,0 +1,14 @@
+void PrintArrayReverse(int[] array, int index)
+{
+    if (index < 0)
+    {
+        return;
+    }
+    Console.Write($"{array[index]} ");
+    PrintArrayReverse(array, index - 1);
+}
+
+Console.WriteLine("Введите элементы массива через пробел: ");
+int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+PrintArrayReverse(array, array.Length - 1);

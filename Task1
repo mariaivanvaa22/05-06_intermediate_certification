@@ -1,0 +1,26 @@
+void PrintNumbers(int m, int n)
+{
+    if (m <= n)
+    {
+        Console.Write($"{m} ");
+        if (m != n)
+        {
+            PrintNumbers(m + 1, n);
+        }
+    }
+    else
+    {
+        Console.Write($"{m} ");
+        if (m != n)
+        {
+            PrintNumbers(m - 1, n);
+        }
+    }
+}
+
+Console.WriteLine("Введите значение M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите значение N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+PrintNumbers(m, n);
